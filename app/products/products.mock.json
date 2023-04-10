@@ -1,0 +1,26 @@
+[
+	{
+		"urlImg": "/products/shirt.png",
+		"title": "Black t-shirt",
+		"value": 7.95,
+		"id": "1",
+		"description": "Unisex Basic Softstyle T-Shirt",
+		"quantity": 1
+	},
+	{
+		"urlImg": "/products/hoodie.png",
+		"title": "Black Hoodie",
+		"value": 13,
+		"id": "2",
+		"description": "Unisex Basic Softstyle T-Shirt",
+		"quantity": 1
+	},
+	{
+		"urlImg": "/products/cap.png",
+		"title": "Black cap",
+		"value": 23,
+		"id": "3",
+		"description": "Unisex Basic Softstyle T-Shirt",
+		"quantity": 1
+	}
+]

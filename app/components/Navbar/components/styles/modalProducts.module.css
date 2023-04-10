@@ -1,0 +1,159 @@
+.container {
+	height: 260px;
+	width: 95%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #fff;
+}
+
+.containerImg {
+	width: 30%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, #000, #121212);
+}
+.img {
+	height: 100%;
+	width: 100%;
+}
+.containerDesc {
+	width: 70%;
+	height: 100%;
+	padding: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.containerTitleAndDesc {
+	width: 100%;
+	height: 30%;
+	margin-bottom: 50px;
+	text-align: left;
+}
+.title {
+	font-size: 2em;
+}
+.desc {
+	font-size: 1em;
+	display: block;
+	width: 100%;
+	color: #999999;
+}
+
+.containerQuantityAndPrice {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	height: 70%;
+	gap: 10px;
+	width: 100%;
+}
+.containerQuantity {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+.quantity {
+	font-size: 1em;
+}
+
+.contador {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border: 1px solid #fff;
+	padding: 5px;
+	border-radius: 20px;
+}
+.btnQuantity {
+	background-color: #000;
+	border: none;
+	color: #fff;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+.selectSizeAndPrice {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.selectSize {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.size {
+	font-size: 0.9em;
+}
+
+.price {
+	font-size: 1.5em;
+}
+
+@media screen and (max-width: 800px) {
+	.container {
+		height: 200px;
+	}
+	.title {
+		font-size: 1em;
+	}
+	.desc {
+		font-size: 0.7em;
+	}
+	.quantity {
+		font-size: 0.7em;
+	}
+	.size {
+		font-size: 0.7em;
+	}
+	.price {
+		font-size: 1.1em;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.containerDesc {
+		padding: 0;
+		padding: 20px 0 20px 10px;
+	}
+	.containerTitleAndDesc {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.title {
+		font-size: 1.3em;
+		width: 100%;
+	}
+	.desc {
+		font-size: 0.8em;
+	}
+	.quantity {
+		font-size: 0.8em;
+	}
+	.size {
+		font-size: 1em;
+	}
+	.price {
+		font-size: 1.3em;
+	}
+	.selectSizeAndPrice {
+		flex-direction: column;
+		gap: 10px;
+		align-items: flex-start;
+	}
+	.containerImg {
+		width: 40%;
+	}
+	.contador {
+		font-size: 0.95em;
+	}
+}

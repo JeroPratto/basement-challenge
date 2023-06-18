@@ -86,6 +86,7 @@
 	width: 50%;
 	height: 100%;
 	padding: 2%;
+	cursor: pointer;
 }
 .checkoutImg {
 	width: 100%;
@@ -102,6 +103,7 @@
 	justify-content: center;
 	align-items: center;
 	gap: 5px;
+	cursor: pointer;
 }
 .buttonClose img {
 	height: 1.5em;

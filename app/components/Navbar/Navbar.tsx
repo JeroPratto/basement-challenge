@@ -12,7 +12,7 @@ export interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
 	const state = useSelector((store: AppStore) => store.productCart)
-	const [cantproducts, setCantProducts] = useState<number>()
+	const [cantproducts, setCantProducts] = useState<number>(0)
 	useEffect(() => {
 		setCantProducts(state.length)
 	}, [state])
@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 				<div className={estilos.containerBtnCart}>
 					<Modal>
 						<button className={estilos.btnCart}>
-							CART {`(${cantproducts})`}
+							{`CART(${cantproducts})`}
 						</button>
 					</Modal>
 				</div>

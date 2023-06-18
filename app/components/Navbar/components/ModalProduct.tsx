@@ -1,9 +1,8 @@
 import Product from '@/app/models/Product'
-import { modifyQuantity, removeProduct } from '@/app/redux/states/product.state'
 import Image from 'next/image'
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
 import ToggleGroupSizes from './ToggleGroupSizes'
+import { BtnAddQuantity, BtnLessQuantity } from './btnQuantity'
 import estilos from './styles/modalProducts.module.css'
 
 export interface ModalProductProps {
@@ -12,25 +11,8 @@ export interface ModalProductProps {
 
 const ModalProduct: React.FC<ModalProductProps> = ({ product }) => {
 	const [quantityState, setQuantityState] = useState(product.quantity)
-	const dispatch = useDispatch()
-	const handleClickAddQuantity = () => {
-		const id = product.id
-		const newQuantity = quantityState + 1
-		setQuantityState(newQuantity)
-		dispatch(modifyQuantity({ id, quantity: newQuantity }))
-	}
-	const handleClickLessQuantity = () => {
-		const id = product.id
-		if (quantityState > 1) {
-			const newQuantity = quantityState - 1
-			setQuantityState(newQuantity)
-			dispatch(modifyQuantity({ id, quantity: newQuantity }))
-		} else {
-			dispatch(removeProduct({ id }))
-		}
-	}
 	return (
-		<div className={estilos.container}>
+		<div className={estilos.container} data-testid='container product modal'>
 			<div className={estilos.containerImg}>
 				<Image
 					src={product.urlImg}
@@ -38,6 +20,7 @@ const ModalProduct: React.FC<ModalProductProps> = ({ product }) => {
 					className={estilos.img}
 					width={200}
 					height={258}
+					data-testid='product image'
 				/>
 			</div>
 			<div className={estilos.containerDesc}>
@@ -49,19 +32,23 @@ const ModalProduct: React.FC<ModalProductProps> = ({ product }) => {
 					<div className={estilos.containerQuantity}>
 						<p className={estilos.quantity}>QUANTITY: </p>
 						<div className={estilos.contador}>
-							<button
+							<BtnLessQuantity
+								id={product.id}
+								quantityState={quantityState}
+								stateUpdater={setQuantityState}
 								className={estilos.btnQuantity}
-								onClick={handleClickLessQuantity}
 							>
 								-
-							</button>
+							</BtnLessQuantity>
 							<p>{quantityState}</p>
-							<button
+							<BtnAddQuantity
 								className={estilos.btnQuantity}
-								onClick={handleClickAddQuantity}
+								id={product.id}
+								quantityState={quantityState}
+								stateUpdater={setQuantityState}
 							>
 								+
-							</button>
+							</BtnAddQuantity>
 						</div>
 					</div>
 					<div className={estilos.selectSizeAndPrice}>
@@ -69,7 +56,9 @@ const ModalProduct: React.FC<ModalProductProps> = ({ product }) => {
 							<p className={estilos.size}>SIZE: </p>
 							<ToggleGroupSizes />
 						</div>
-						<p className={estilos.price}>${product.value * quantityState}</p>
+						<p className={estilos.price} data-testid='product value'>
+							${product.value * quantityState}
+						</p>
 					</div>
 				</div>
 			</div>

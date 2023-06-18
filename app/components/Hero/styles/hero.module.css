@@ -2,6 +2,7 @@
 	margin-top: 10vh;
 	padding-top: 2.2vw;
 	width: 100%;
+	max-width: 1440px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

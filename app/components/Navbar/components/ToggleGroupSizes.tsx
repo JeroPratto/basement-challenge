@@ -9,6 +9,7 @@ const ToggleGroupSizes: React.FC<ToggleGroupSizesProps> = () => {
 			className={estilos.toggleGroup}
 			type='single'
 			defaultValue='medium'
+			data-testid='toggle group sizes'
 		>
 			<ToggleGroup.Item
 				className={estilos.toggleGroupItem}

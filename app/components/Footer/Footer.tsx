@@ -7,7 +7,12 @@ export interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
 	return (
 		<div className={estilos.container}>
-			<Image src={imgFooter} alt='wear everyday' className={estilos.img} />
+			<Image
+				src={imgFooter}
+				alt='wear everyday'
+				className={estilos.img}
+				data-testid={'image footer'}
+			/>
 		</div>
 	)
 }

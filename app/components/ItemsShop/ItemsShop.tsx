@@ -8,7 +8,7 @@ export interface ItemsShopProps {}
 
 const ItemsShop: React.FC<ItemsShopProps> = () => {
 	return (
-		<div className={estilos.container}>
+		<div className={estilos.container} data-testid='container itemsShop'>
 			<div className={estilos.containerCards}>
 				{dataProducts.map((product: Product) => (
 					<CardItem

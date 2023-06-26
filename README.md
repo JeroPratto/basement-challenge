@@ -1,13 +1,28 @@
-# Basement
+# Basement Challenge
 
 This project is a challenge from the company Basement and can be found [here](https://github.com/goncy/basement-challenge).
 
 ## How to install and Run
 
-1- Clone this project: `git clone htpps://google.com`
-2- Install: `npm install`
-3- Run: `npm run dev`
-4- Test: `npm run test`
+```bash
+# Clone this project
+git clone https://github.com/JeroPratto/basement-challenge
+# Install
+npm install
+# Run
+npm run dev
+# Test
+npm run test
+```
+
+## Technologies
+
+- Next.js
+- Jest
+- Testing Library
+- Redux Toolkit
+- Redux mock store
+- Radix
 
 ## This is the final result.
 

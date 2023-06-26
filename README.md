@@ -6,7 +6,7 @@ This project is a challenge from the company Basement and can be found [here](ht
 
 ```bash
 # Clone this project
-git clone https://github.com/JeroPratto/basement-challenge
+git clone https://github.com/JeroPratto/basement-challenge.git
 # Install
 npm install
 # Run

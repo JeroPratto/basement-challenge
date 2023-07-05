@@ -37,9 +37,7 @@ const CardItem: React.FC<CardItemProps> = ({
 					src={urlImg}
 					alt={description}
 					className={estilos.img}
-					width={435}
-					height={468}
-					sizes='(max-width: 375px) 284px, (max-width: 1440px) 435px'
+					fill
 					data-testid='product image'
 				/>
 				<div
@@ -50,9 +48,7 @@ const CardItem: React.FC<CardItemProps> = ({
 						src={addProductHover}
 						alt={'Add product'}
 						className={estilos.img}
-						width={245}
-						height={128}
-						sizes='(max-width: 375px) 150px, (max-width: 1440px) 245px'
+						fill
 						data-testid='hover image'
 					/>
 				</div>
